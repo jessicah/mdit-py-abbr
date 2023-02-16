@@ -92,8 +92,6 @@ def abbr_replace(state: StateBlock):
 
 	regText = f"(^|{UNICODE_PUNCT_RE}|{UNICODE_SPACE_RE}|[{otherChars}])({'|'.join(alternations)})($|{UNICODE_PUNCT_RE}|{UNICODE_SPACE_RE}|[{otherChars}])"
 
-	print(regText)
-
 	reg = re.compile(regText)
 
 	blockTokens = state.tokens
